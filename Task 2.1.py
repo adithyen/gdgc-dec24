@@ -1,3 +1,6 @@
+#Day 2
+#Question 1 :
+#create a program to check if a numuber is prime or not
 n=int(input("Enter a number: "))
 p=1
 if n==2 or n==3:
