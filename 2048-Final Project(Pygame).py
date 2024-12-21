@@ -206,23 +206,7 @@ def show(List):
             rect1 = surf1.get_rect()
             rect1.center = box_rect.center
             playSurface.blit(surf1, rect1)
-def ColorChange(num):
-    return {
-        0: 'gray',
-        2: 'white',
-        4: 'light_yellow',
-        8: 'sandy_brown',
-        16: 'coral',
-        32: 'tomato',
-        64: 'red',
-        128: 'yellow_1',
-        256: 'yellow_2',
-        512: 'yellow_3',
-        1024: 'yellow_3',
-        2048: 'yellow_3',
-        4096: 'green',
-        8192: 'blue',
-    } [num]
+def ColorChange(num): return {0: 'gray', 2: 'lightblue', 4: 'yellow', 8: 'orange', 16: 'darkorange', 32: 'red', 64: 'darkred', 128: 'pink', 256: 'purple', 512: 'indigo', 1024: 'blue', 2048: 'darkblue', 4096: 'green', 8192: 'lime'}.get(num, 'default_color')
 check_errors = pygame.init()
 pygame.font.init()
 width = 600
@@ -231,21 +215,7 @@ trans_x = 100
 trans_y = 100
 playSurface = pygame.display.set_mode((width, height))
 pygame.display.set_caption('2048 Game!')
-color_dic = {}
-color_dic['black'] = pygame.Color(0, 0, 0)
-color_dic['gray'] = pygame.Color(150, 150, 150)
-color_dic['white'] = pygame.Color(245, 245, 245)
-color_dic['light_yellow'] = pygame.Color(255, 248, 220)
-color_dic['sandy_brown'] = pygame.Color(244, 164, 96)
-color_dic['coral'] = pygame.Color(255, 127, 80)
-color_dic['tomato'] = pygame.Color(255, 99, 71)
-color_dic['red'] = pygame.Color(210, 0, 0)
-color_dic['yellow_1'] = pygame.Color(255, 255, 204)
-color_dic['yellow_2'] = pygame.Color(255, 255, 153)
-color_dic['yellow_3'] = pygame.Color(255, 255, 102)
-color_dic['green'] = pygame.Color(0, 255, 0)
-color_dic['blue'] = pygame.Color(0, 0, 255)
-color_dic['purple'] = pygame.Color(238, 130, 238)
+color_dic = {'black': pygame.Color(0, 0, 0), 'gray': pygame.Color(150, 150, 150), 'white': pygame.Color(245, 245, 245), 'lightblue': pygame.Color(173, 216, 230), 'yellow': pygame.Color(255, 255, 0), 'orange': pygame.Color(255, 165, 0), 'darkorange': pygame.Color(255, 140, 0), 'red': pygame.Color(255, 0, 0), 'darkred': pygame.Color(139, 0, 0), 'pink': pygame.Color(255, 192, 203), 'purple': pygame.Color(128, 0, 128), 'indigo': pygame.Color(75, 0, 130), 'blue': pygame.Color(0, 0, 255), 'darkblue': pygame.Color(0, 0, 139), 'green': pygame.Color(0, 255, 0), 'lime': pygame.Color(0, 255, 0)}
 fpsController = pygame.time.Clock()
 frame_rate = 50
 numberList = [[0 for i in range(4)] for j in range(4)]
